@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSharpShop3.Custom_Exception;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -71,7 +72,7 @@ namespace CSharpShop3
 
             if(this.drink >this.litre)
             {
-                throw new ArgumentOutOfRangeException("Capienza", "ECCEZIONE: Non puoi bere oltre la capienza max");
+                throw new DrinkException("Capienza", "ECCEZIONE Customizzata: Non puoi bere oltre la capienza max");
             }
             newLitres = (float)this.litre - this.drink;
 

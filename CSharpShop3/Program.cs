@@ -56,7 +56,7 @@ try
     //variabili per creare eccezioni
     float ph = 7.5f;
     float litre = 1.5f;
-    float drink = 1.5f;
+    float drink = 2.5f;
     float fill = 1.5f;
 
     //quinto attributo è litre, la capienza che genera eccezione.
@@ -86,7 +86,7 @@ try
     Console.WriteLine("-----------------------------------");
 
 }
-catch (ArgumentOutOfRangeException e)
+catch (Exception e)
 {
     Console.WriteLine(e.Message);
 }
