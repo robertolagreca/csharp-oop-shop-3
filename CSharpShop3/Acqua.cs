@@ -66,7 +66,7 @@ namespace CSharpShop3
 
         //METODI D'UTILITA'
 
-        private float drinkBottle()
+        private float DrinkBottle()
         {
             float newLitres;
 
@@ -79,7 +79,7 @@ namespace CSharpShop3
             return newLitres;
         }
 
-        private float fillBottle()
+        private float FillBottle()
         {
             float newLitres;
 
@@ -98,7 +98,7 @@ namespace CSharpShop3
             return newLitres;
         }
 
-        private float emptyBottle()
+        private float EmptyBottle()
         {
             return this.litre = (float)0;
         }
