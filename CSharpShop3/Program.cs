@@ -91,10 +91,6 @@ try
     float drink = 1.5f;
     float fill = 1.5f;
 
-    //quinto attributo è litre, la capienza che genera eccezione.
-    //sesto attributo è il ph che genera eccezione
-    //ottavo attributo è l'acqua che si beve.
-    //nono tributo è i litri che vengono riempiti
     Acqua bottle2 = new Acqua("Ferrarelle", "Frizzante", 1.9f, 6, litre, ph, "Trentino", drink, fill);
 
 
