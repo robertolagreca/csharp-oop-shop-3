@@ -53,12 +53,19 @@ description = "Autore Italo Calvino";
 try
 {
     //PRODOTTO ACQUA
+    //variabili per creare eccezioni
     float ph = 7.5f;
-    float litre = 2f;
+    float litre = 1.5f;
+    float drink = 1.5f;
+    float fill = 2.3f;
 
     //quinto attributo è litre, la capienza che genera eccezione.
-    //sesto attributo è il ph che genera eccezione.
-    Acqua bottle1 = new Acqua("Sor", "Naturale", 1.9f, 6, litre, ph, "Trentino", 1f);
+    //sesto attributo è il ph che genera eccezione
+    //ottavo attributo è l'acqua che si beve.
+    //nono tributo è i litri che vengono riempiti
+    Acqua bottle1 = new Acqua("Sor", "Naturale", 1.9f, 6, litre, ph, "Trentino", drink, fill);
+
+
     //Richiedo variabili a classe Prodotto e Stampa
     Console.WriteLine("-----------------------------------");
     Console.WriteLine("STAMPA PRODOTTO: BOTTIGLIA D'ACQUA");

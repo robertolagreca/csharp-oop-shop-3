@@ -65,6 +65,11 @@ namespace CSharpShop3
         private float drinkBottle()
         {
             float newLitres;
+
+            if(this.drink >this.litre)
+            {
+                throw new ArgumentOutOfRangeException("Capienza", "ECCEZIONE: Non puoi bere oltre la capienza max");
+            }
             newLitres = (float)this.litre - this.drink;
 
             return newLitres;
@@ -73,6 +78,12 @@ namespace CSharpShop3
         private float fillBottle()
         {
             float newLitres;
+
+            if (this.fill > this.litre)
+            {
+                throw new ArgumentOutOfRangeException("Capienza", "ECCEZIONE: Non riempire oltre la capienza max");
+            }
+
             newLitres = (float)this.litre + this.fill;
             if (this.fill > this.litre)
             {
@@ -95,6 +106,7 @@ namespace CSharpShop3
             Console.WriteLine("Capacita di " + this.litre);
             Console.WriteLine("Il pH è " + this.ph);
             Console.WriteLine("Consumato " + this.drink + " l. Acqua rimasta nella bottiglia " + drinkBottle());
+            Console.WriteLine("Riempito " + this.fill + " l. Acqua rimasta nella bottiglia " + fillBottle());
         }
     }
 }
