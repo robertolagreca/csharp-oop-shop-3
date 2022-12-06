@@ -136,7 +136,7 @@ catch (Exception e)
 }
 
 //STAMPA NUMERO PRODOTTI TOTALI
-Console.WriteLine("Numero prodotti: " + Prodotto.counterProducts);
+Console.WriteLine("Numero prodotti: " + Prodotto.GetCounterProds());
 
 
 

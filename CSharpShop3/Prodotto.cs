@@ -16,7 +16,7 @@ namespace CSharpShop3
         private int iva;
 
         //dichiarazione variabile statica contatore
-        public static int counterProducts = 0;
+        private static int counterProducts = 0;
 
 
         //COSTRUTTORE
@@ -71,7 +71,7 @@ namespace CSharpShop3
         public string GetDescription() { return description; }
         public float GetPrice() { return price; }
         public int GetIva() { return iva; }
-
+        public static int GetCounterProds() { return counterProducts; }
 
 
         //METODI
