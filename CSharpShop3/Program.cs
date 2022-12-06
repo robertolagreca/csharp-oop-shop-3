@@ -49,12 +49,16 @@ description = "Autore Italo Calvino";
 
 
 
-//PRODOTTO ACQUA
+
 try
 {
-    //sesto attributo 11.5f è il ph. Genera eccezione.
-    Acqua bottle1 = new Acqua("Sor", "Naturale", 1.9f, 6, 1.5f, 11.5f, "Trentino", 1f);
+    //PRODOTTO ACQUA
+    float ph = 7.5f;
+    float litre = 2f;
 
+    //quinto attributo è litre, la capienza che genera eccezione.
+    //sesto attributo è il ph che genera eccezione.
+    Acqua bottle1 = new Acqua("Sor", "Naturale", 1.9f, 6, litre, ph, "Trentino", 1f);
     //Richiedo variabili a classe Prodotto e Stampa
     Console.WriteLine("-----------------------------------");
     Console.WriteLine("STAMPA PRODOTTO: BOTTIGLIA D'ACQUA");
@@ -70,12 +74,12 @@ try
     bottle1.BasicPrice();
     bottle1.FullPrice();
     Console.WriteLine("-----------------------------------");
+
 }
 catch (ArgumentOutOfRangeException e)
 {
     Console.WriteLine(e.Message);
 }
-
 
 
 

@@ -27,6 +27,10 @@ namespace CSharpShop3
                 throw new ArgumentOutOfRangeException("ph", "ECCEZIONE: il ph deve essere in un range di 0-10");
             }
 
+            if (litre < 0f || litre > 1.5f)
+            {
+                throw new ArgumentOutOfRangeException("capienza", "ECCEZIONE: le bottiglie sono di max 1.5 litri");
+            }
 
             this.litre = litre;
             this.drink = drink;
@@ -47,6 +51,14 @@ namespace CSharpShop3
         public string GetSource() { return source; }
 
         //SETTERS
+        public void SetPh(float ph) 
+        {
+            if (ph < 0f || ph > 10f)
+            {
+                throw new ArgumentOutOfRangeException("ph", "ECCEZIONE: il ph deve essere in un range di 0-10");
+            }
+            this.ph = ph;
+        }
 
         //METODI D'UTILITA'
 
