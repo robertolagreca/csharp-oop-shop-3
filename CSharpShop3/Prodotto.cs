@@ -25,6 +25,10 @@ namespace CSharpShop3
             CreateCode();
 
             //this.code = code;
+            if(name == "")
+            {
+                throw new ArgumentException("Il nome del prodotto non può essere vuoto", "Nome");
+            }
             this.name = name;
             this.description = description;
             this.price = price;
