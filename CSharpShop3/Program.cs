@@ -51,12 +51,12 @@ description = "Autore Italo Calvino";
 
 
 try
-{
+{   //PRODOTTO 1
     //PRODOTTO ACQUA
     //variabili per creare eccezioni
     float ph = 7.5f;
     float litre = 1.5f;
-    float drink = 2.5f;
+    float drink = 1.5f;
     float fill = 1.5f;
 
     //quinto attributo è litre, la capienza che genera eccezione.
@@ -85,6 +85,7 @@ try
     Console.WriteLine("I litri " + litre + " in galloni sono " + Acqua.ConvertToGallons(litre));
     Console.WriteLine("-----------------------------------");
 
+    
 }
 catch (Exception e)
 {
@@ -92,10 +93,50 @@ catch (Exception e)
 }
 
 
+try
+{   //PRODOTTO 2
+    //PRODOTTO ACQUA
+    //variabili per creare eccezioni
+    float ph = 7.5f;
+    float litre = 1.5f;
+    float drink = 1.5f;
+    float fill = 1.5f;
+
+    //quinto attributo è litre, la capienza che genera eccezione.
+    //sesto attributo è il ph che genera eccezione
+    //ottavo attributo è l'acqua che si beve.
+    //nono tributo è i litri che vengono riempiti
+    Acqua bottle2 = new Acqua("Ferrarelle", "Frizzante", 1.9f, 6, litre, ph, "Trentino", drink, fill);
 
 
+    //Richiedo variabili a classe Prodotto e Stampa
+    Console.WriteLine("-----------------------------------");
+    Console.WriteLine("STAMPA PRODOTTO: BOTTIGLIA D'ACQUA");
+    code = bottle2.GetCode();
+    Console.WriteLine("Il codice creato per l'acqua è " + code);
 
+    Console.WriteLine("Hai inserito i seguenti dati:");
 
+    Console.WriteLine("Nome prodotto: " + bottle2.GetName());
+    Console.WriteLine("Descrizione prodotto: " + bottle2.GetDescription());
+
+    bottle2.FullName();
+    bottle2.BasicPrice();
+    bottle2.FullPrice();
+
+    //RICHIAMO METODO STATICO
+    Console.WriteLine("I litri " + litre + " in galloni sono " + Acqua.ConvertToGallons(litre));
+    Console.WriteLine("-----------------------------------");
+
+    
+}
+catch (Exception e)
+{
+    Console.WriteLine(e.Message);
+}
+
+//STAMPA NUMERO PRODOTTI TOTALI
+Console.WriteLine("Numero prodotti: " + Prodotto.counterProducts);
 
 
 

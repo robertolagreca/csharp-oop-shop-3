@@ -15,6 +15,8 @@ namespace CSharpShop3
         private float price;
         private int iva;
 
+        //dichiarazione variabile statica contatore
+        public static int counterProducts = 0;
 
 
         //COSTRUTTORE
@@ -27,6 +29,7 @@ namespace CSharpShop3
             this.description = description;
             this.price = price;
             this.iva = iva;
+            counterProducts++;
         }
 
 

@@ -87,13 +87,14 @@ namespace CSharpShop3
             {
                 throw new ArgumentOutOfRangeException("Capienza", "ECCEZIONE: Non riempire oltre la capienza max");
             }
-
-            newLitres = (float)this.litre + this.fill;
-            if (this.fill > this.litre)
-            {
-                return this.litre;
-            }
-
+            
+            //if (this.fill > this.litre)
+            //{
+            //    return this.litre;
+           // } 
+            
+             newLitres = (float)this.fill;
+            
             return newLitres;
         }
 
