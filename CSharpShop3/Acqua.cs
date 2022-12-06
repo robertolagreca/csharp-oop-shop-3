@@ -20,6 +20,14 @@ namespace CSharpShop3
         public Acqua(string name, string description, float price, int iva, float litre, float ph, string source, float drink = 0f, float fill = 0f, float empty = 0f) : base(name, description, price, iva)
         {
             //CreateCode(); usa in automatico quello della super classe
+
+            //Controllo range ph. Nel caso genera eccezione.
+            if(ph< 0f || ph>10f)
+            {
+                throw new ArgumentOutOfRangeException("ph", "ECCEZIONE: il ph deve essere in un range di 0-10");
+            }
+
+
             this.litre = litre;
             this.drink = drink;
             this.fill = fill;
