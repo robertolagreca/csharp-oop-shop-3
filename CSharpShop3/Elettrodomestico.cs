@@ -37,5 +37,12 @@ namespace CSharpShop3
             Console.WriteLine("La sua altezza è " + this.height);
             Console.WriteLine("Il suo colore è " + this.color);
         }
+
+        public override void PrintGeneralDate()
+        {
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("PRODOTTO CREATO: ELETTRODOMESTICO");
+            base.PrintGeneralDate();
+        }
     }
 }

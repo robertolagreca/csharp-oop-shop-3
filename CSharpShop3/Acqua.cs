@@ -114,6 +114,15 @@ namespace CSharpShop3
             Console.WriteLine("Riempito " + this.fill + " l. Acqua rimasta nella bottiglia " + fillBottle());
         }
 
+        public override void PrintGeneralDate()
+        {
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("PRODOTTO CREATO: ACQUA");
+            base.PrintGeneralDate();
+        }
+
+
+
         //METODI STATICI
         //Conversione da litri in galloni.
         public static float ConvertToGallons(float litre)

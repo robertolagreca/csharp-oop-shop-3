@@ -43,5 +43,12 @@ namespace CSharpShop3
             base.FullName();
             printList();
         }
+
+        public override void PrintGeneralDate()
+        {
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("PRODOTTO CREATO: SACCHETTO FRUTTA");
+            base.PrintGeneralDate();
+        }
     }
 }

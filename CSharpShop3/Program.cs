@@ -64,20 +64,7 @@ try
     //nono tributo è i litri che vengono riempiti
     Acqua bottle1 = new Acqua("Sor", "Naturale", 1.9f, 6, litre, ph, "Trentino", drink, fill);
 
-
-    //Richiedo variabili a classe Prodotto e Stampa
-    Console.WriteLine("-----------------------------------");
-    Console.WriteLine("PRODOTTO NUMERO " + Prodotto.GetCounterProds());
-    Console.WriteLine("STAMPA PRODOTTO: BOTTIGLIA D'ACQUA");
-    Console.WriteLine("-----------------------------------");
-    code = bottle1.GetCode();
-    Console.WriteLine("Il codice creato per l'acqua è " + code);
-
-    Console.WriteLine("Hai inserito i seguenti dati:");
-
-    Console.WriteLine("Nome prodotto: " + bottle1.GetName());
-    Console.WriteLine("Descrizione prodotto: " + bottle1.GetDescription());
-
+    bottle1.PrintGeneralDate();
     bottle1.FullName();
     bottle1.BasicPrice();
     bottle1.FullPrice();
@@ -90,6 +77,7 @@ try
 }
 catch (Exception e)
 {
+    Prodotto.cancelCounterProd();
     Console.WriteLine(e.Message);
 }
 
@@ -98,7 +86,7 @@ try
 {   //PRODOTTO 2
     //PRODOTTO ACQUA
     //variabili per creare eccezioni
-    float ph = 7.5f;
+    float ph = 11.5f;
     float litre = 1.5f;
     float drink = 1.5f;
     float fill = 1.5f;
@@ -110,19 +98,7 @@ try
     Acqua bottle2 = new Acqua("Ferrarelle", "Frizzante", 1.9f, 6, litre, ph, "Trentino", drink, fill);
 
 
-    //Richiedo variabili a classe Prodotto e Stampa
-    Console.WriteLine("-----------------------------------");
-    Console.WriteLine("PRODOTTO NUMERO " + Prodotto.GetCounterProds());
-    Console.WriteLine("STAMPA PRODOTTO: BOTTIGLIA D'ACQUA");
-    Console.WriteLine("-----------------------------------");
-    code = bottle2.GetCode();
-    Console.WriteLine("Il codice creato per l'acqua è " + code);
-
-    Console.WriteLine("Hai inserito i seguenti dati:");
-
-    Console.WriteLine("Nome prodotto: " + bottle2.GetName());
-    Console.WriteLine("Descrizione prodotto: " + bottle2.GetDescription());
-
+    bottle2.PrintGeneralDate();
     bottle2.FullName();
     bottle2.BasicPrice();
     bottle2.FullPrice();
@@ -135,6 +111,7 @@ try
 }
 catch (Exception e)
 {
+    Prodotto.cancelCounterProd();
     Console.WriteLine(e.Message);
 }
 
@@ -145,19 +122,7 @@ try {
     FruitsPack fruits1 = new FruitsPack("Frutta secca", "mandorle ecc", 4.6f, 22, fruits);
 
 
-    //Richiedo variabili a classe Prodotto e Stampa
-    Console.WriteLine("-----------------------------------");
-    Console.WriteLine("PRODOTTO NUMERO " + Prodotto.GetCounterProds());
-    Console.WriteLine("STAMPA PRODOTTO: SACCHETTO DI FRUTTA");
-    Console.WriteLine("-----------------------------------");
-    code = fruits1.GetCode();
-    Console.WriteLine("Il codice creato per il sacchetto di frutta è " + code);
-    
-    Console.WriteLine("Hai inserito i seguenti dati:");
-
-    Console.WriteLine("Nome prodotto: " + fruits1.GetName());
-    Console.WriteLine("Descrizione prodotto: " + fruits1.GetDescription());
-
+    fruits1.PrintGeneralDate();
 
     fruits1.FullName();
     fruits1.BasicPrice();
@@ -176,17 +141,7 @@ try {
     //PRODOTTO ELETTRODOMESTICO
     Elettrodomestico washingMachine = new Elettrodomestico("Lavatrice", "Lava bene", 300f, 22, 24.7f, 52.2f, 1.05f, "Bianca");
 
-    //Richiedo variabili a classe Prodotto e Stampa
-    Console.WriteLine("-----------------------------------");
-    Console.WriteLine("PRODOTTO NUMERO " + Prodotto.GetCounterProds());
-    Console.WriteLine("STAMPA PRODOTTO: LAVATRICE");
-    code = washingMachine.GetCode();
-    Console.WriteLine("Il codice creato per la lavatrice è " + code);
-
-    Console.WriteLine("Hai inserito i seguenti dati:");
-
-    Console.WriteLine("Nome prodotto: " + washingMachine.GetName());
-    Console.WriteLine("Descrizione prodotto: " + washingMachine.GetDescription());
+    washingMachine.PrintGeneralDate();
 
     washingMachine.FullName();
     washingMachine.BasicPrice();
@@ -203,17 +158,8 @@ try
 {
     //PRODOTTO 5
     CiboScatola tuna = new CiboScatola("Rio Mare", "Pescato nel mediterraneo", 3.4f, 22, "pesce", 500f, 400f);
-    //Richiedo variabili a classe Prodotto e Stampa
-    Console.WriteLine("-----------------------------------");
-    Console.WriteLine("PRODOTTO NUMERO " + Prodotto.GetCounterProds());
-    Console.WriteLine("STAMPA PRODOTTO: CIBO IN SCATOLA");
-    code = tuna.GetCode();
-    Console.WriteLine("Il codice creato per il cibo in scatola è " + code);
-
-    Console.WriteLine("Hai inserito i seguenti dati:");
-
-    Console.WriteLine("Nome prodotto: " + tuna.GetName());
-    Console.WriteLine("Descrizione prodotto: " + tuna.GetDescription());
+    
+    tuna.PrintGeneralDate();
 
     tuna.FullName();
     tuna.BasicPrice();

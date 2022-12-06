@@ -22,18 +22,20 @@ namespace CSharpShop3
         //COSTRUTTORE
         public Prodotto(string name, string description, float price, int iva)
         {
+            counterProducts++;
             CreateCode();
 
             //this.code = code;
             if(name == "")
             {
+                counterProducts--;
                 throw new ArgumentException("Il nome del prodotto non può essere vuoto", "Nome");
             }
             this.name = name;
             this.description = description;
             this.price = price;
             this.iva = iva;
-            counterProducts++;
+            
         }
 
 
@@ -90,6 +92,9 @@ namespace CSharpShop3
             code = randCode;
 
         }
+        //Toglie il prodotto non andato buon fine dal contatore
+        public static void cancelCounterProd() 
+        { counterProducts--; }
 
         //Stampa prezzo senza IVA
         public void BasicPrice()
@@ -114,6 +119,21 @@ namespace CSharpShop3
 
             fullName = this.code.ToString() + this.name;
             Console.WriteLine("Il nome completo è " + fullName);
+        }
+
+        public virtual void PrintGeneralDate()
+        {
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("PRODOTTO NUMERO " + Prodotto.GetCounterProds());
+            Console.WriteLine("STAMPA PRODOTTO");
+            Console.WriteLine("-----------------------------------");
+            code = GetCode();
+            Console.WriteLine("Il codice creato per l'acqua è " + code);
+
+            Console.WriteLine("Hai inserito i seguenti dati:");
+
+            Console.WriteLine("Nome prodotto: " + GetName());
+            Console.WriteLine("Descrizione prodotto: " + GetDescription());
         }
     }
 }

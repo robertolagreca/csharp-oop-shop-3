@@ -37,5 +37,12 @@ namespace CSharpShop3
             Console.WriteLine("Il peso lordo è " + this.weightTotal);
             Console.WriteLine("Il peso netto è " + this.weightNetto);
         }
+
+        public override void PrintGeneralDate()
+        {
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("PRODOTTO CREATO: CIBO IN SCATOLA");
+            base.PrintGeneralDate();
+        }
     }
 }
