@@ -57,7 +57,7 @@ try
     float ph = 7.5f;
     float litre = 1.5f;
     float drink = 1.5f;
-    float fill = 2.3f;
+    float fill = 1.5f;
 
     //quinto attributo è litre, la capienza che genera eccezione.
     //sesto attributo è il ph che genera eccezione
@@ -80,6 +80,9 @@ try
     bottle1.FullName();
     bottle1.BasicPrice();
     bottle1.FullPrice();
+
+    //RICHIAMO METODO STATICO
+    Console.WriteLine("I litri " + litre + " in galloni sono " + Acqua.ConvertToGallons(litre));
     Console.WriteLine("-----------------------------------");
 
 }

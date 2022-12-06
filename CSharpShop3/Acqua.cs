@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,8 @@ namespace CSharpShop3
         float fill;
         float empty;
         string source;
+
+        
 
         //COSTRUTTORI
         public Acqua(string name, string description, float price, int iva, float litre, float ph, string source, float drink = 0f, float fill = 0f, float empty = 0f) : base(name, description, price, iva)
@@ -107,6 +110,14 @@ namespace CSharpShop3
             Console.WriteLine("Il pH è " + this.ph);
             Console.WriteLine("Consumato " + this.drink + " l. Acqua rimasta nella bottiglia " + drinkBottle());
             Console.WriteLine("Riempito " + this.fill + " l. Acqua rimasta nella bottiglia " + fillBottle());
+        }
+
+        //METODI STATICI
+        //Conversione da litri in galloni.
+        public static float ConvertToGallons(float litre)
+        {
+            const float gallon = 3.785f;
+            return (float)Math.Round(litre * gallon,2);
         }
     }
 }
